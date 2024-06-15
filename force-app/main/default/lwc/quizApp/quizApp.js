@@ -38,7 +38,7 @@ export default class QuizApp extends LightningElement {
         }
     ]
 
-    //used for disabling the sumbmit button
+    //used for disabling the submit button
     get allNotSelected(){
         return !(Object.keys(this.selected).length === this.myQuestions.length)
     }
@@ -51,7 +51,7 @@ export default class QuizApp extends LightningElement {
 
     //form submit handler
     submitHandler(event){
-        event.preventDefault()
+        event.preventDefault();
         let correct = this.myQuestions.filter(item=> this.selected[item.id] === item.correctAnswer)
         this.correctAnswers = correct.length
         this.isSubmitted = true
