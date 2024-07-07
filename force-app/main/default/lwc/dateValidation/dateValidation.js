@@ -6,7 +6,7 @@ export default class DateValidation extends LightningElement {
     error
     dateHandler(event){
         const {name, value} = event.target
-        this[name] = value 
+        this[name] = value //this.startDate = value
     }
 
     submitHandler(){

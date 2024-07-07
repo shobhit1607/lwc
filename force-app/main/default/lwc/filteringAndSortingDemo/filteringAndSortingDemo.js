@@ -55,12 +55,12 @@ export default class FilteringAndSortingDemo extends LightningElement {
                     if(this.filterBy === 'All'){
                         /**Below logic will filter each and every property of object */
                         return Object.keys(eachObj).some(key=>{
-                            return eachObj[key].toLowerCase().includes(value)
+                            return eachObj[key].toLowerCase().includes(value.toLowerCase());
                         })
                     } else {
                          /**Below logic will filter only selected fields */
                         const val = eachObj[this.filterBy] ? eachObj[this.filterBy]:''
-                        return val.toLowerCase().includes(value)
+                        return val.toLowerCase().includes(value.toLowerCase());
                     }
                 })
             }, 500)

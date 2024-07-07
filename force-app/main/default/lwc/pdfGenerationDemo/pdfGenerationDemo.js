@@ -33,8 +33,8 @@ export default class PdfGenerationDemo extends LightningElement {
         console.log(content.outerHTML)
         generatePDF({recordId:this.recordId, htmlData: content.outerHTML}).then(result=>{
             console.log("attachment id", result)
-            console.log(`devcom-2b9-dev-ed--c.documentforce.com/servlet/servlet.FileDownload?file=${result.Id}`)
-            window.open(`https://devcom-2b9-dev-ed--c.documentforce.com/servlet/servlet.FileDownload?file=${result.Id}`)
+            console.log(`https://lwc-troop-dev-dev-ed.file.force.com/servlet/servlet.FileDownload?file=${result.Id}`)
+            window.open(`https://lwc-troop-dev-dev-ed.file.force.com/servlet/servlet.FileDownload?file=${result.Id}`)
         }).catch(error=>{
             console.error(error)
         })
